@@ -43,7 +43,6 @@ const start = async () => {
     {
       method: 'GET',
       path: '/',
-      cors: true,
       handler: function (request, h) {
 
         return { message: 'Welcome to the restricted home page!' };
@@ -52,7 +51,6 @@ const start = async () => {
     {
       method: 'POST',
       path: '/login',
-      cors: true,
       handler: async (request, h) => {
 
         const { username, password } = request.payload;
