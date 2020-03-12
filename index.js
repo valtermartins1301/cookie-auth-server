@@ -17,7 +17,7 @@ const CORS = {
 };
 
 const start = async () => {
-  const server = Hapi.server();
+  const server = Hapi.server({ host:'0.0.0.0', port: +process.env.PORT });
 
   await server.register(require('@hapi/cookie'));
 
