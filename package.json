@@ -9,7 +9,9 @@
   },
   "author": "valtermartins.1301@gmail.com",
   "license": "ISC",
-  "engines" : { "node" : ">=12.0.0" },
+  "engines": {
+    "node": "12.16.x"
+  },  
   "dependencies": {
     "@hapi/cookie": "^11.0.0",
     "@hapi/hapi": "^19.1.1",
