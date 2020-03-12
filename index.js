@@ -12,6 +12,10 @@ const users = [
   }
 ];
 
+const CORS = {
+  origin: ['http://localhost:3000', 'https://cookie-auth-app-login.netlify.com', 'https://cookie-auth-app-login.netlify.com']
+};
+
 const start = async () => {
   const server = Hapi.server({ port: 4000 });
 
@@ -43,6 +47,9 @@ const start = async () => {
     {
       method: 'GET',
       path: '/',
+      options: {
+        cors: CORS,
+      },
       handler: function (request, h) {
 
         return { message: 'Welcome to the restricted home page!' };
@@ -51,6 +58,9 @@ const start = async () => {
     {
       method: 'POST',
       path: '/login',
+      options: {
+        cors: CORS,
+      },
       handler: async (request, h) => {
 
         const { username, password } = request.payload;
