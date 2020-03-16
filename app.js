@@ -13,7 +13,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(cors({origin: true}));
+app.use(cors({
+  origin: true, 
+  credentials: true
+}));
 app.use(cookieSession({
   name: 'session',
   keys: ['key1', 'key2'],
