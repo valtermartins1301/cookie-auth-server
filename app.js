@@ -15,7 +15,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors({
   origin: true, 
-  credentials: true
+  credentials: true,
+  maxAge: 24 * 3600,
 }));
 app.use(cookieSession({
   name: 'session',
