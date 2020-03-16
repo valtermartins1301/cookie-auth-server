@@ -15,7 +15,7 @@ router.post('/login', function(req, res, next) {
     return res.send({ error: 'invalid user or password'})
   }
 
-  res.cookie('session', 'key', { httpOnly: true, domain: ['.herokuapp.com', '.netlify.com', 'localhost:3000'] });
+  res.cookie('session', 'key', { httpOnly: true, domain: ['.herokuapp.com', '.netlify.com'] });
   res.send({ status: 'ok' });
 });
 
