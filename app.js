@@ -17,6 +17,7 @@ app.use(cors({
   origin: true, 
   credentials: true,
   maxAge: 24 * 3600,
+  preflightContinue: true,
 }));
 app.use(cookieSession({
   name: 'session',
