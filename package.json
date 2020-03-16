@@ -1,20 +1,19 @@
 {
   "name": "cookie-auth-server",
-  "version": "1.0.0",
-  "description": "nodejs server for authenticate and use set-cookie on response",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "valtermartins.1301@gmail.com",
-  "license": "ISC",
   "engines": {
     "node": "12.16.x"
-  },  
+  },
   "dependencies": {
-    "@hapi/cookie": "^11.0.0",
-    "@hapi/hapi": "^19.1.1",
-    "bcrypt": "^4.0.1"
+    "cookie-parser": "~1.4.4",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1"
   }
 }
