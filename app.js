@@ -14,11 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors({
-  
-  origin: ['https://cookie-auth-app-login.netlify.com', 'https://cookie-auth-app-logged.netlify.com'], 
+  origin: true, 
   credentials: true,
-  maxAge: 24 * 3600,
-  preflightContinue: true,
 }));
 app.use(cookieSession({
   name: 'session',
