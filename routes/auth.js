@@ -15,7 +15,7 @@ router.post('/login', function(req, res, next) {
     return res.send({ error: 'invalid user or password'})
   }
 
-  res.cookie('session', 'key', { httpOnly: true, sameSite: 'None', secure: true });
+  res.cookie('session', 'key', { httpOnly: true, sameSite: 'none', secure: true });
   res.send({ status: 'ok' });
 });
 
